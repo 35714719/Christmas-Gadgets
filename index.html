@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Gadgets</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B0000, #228B22);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        .hero {
+            background: url('images/free-photo-of-toy-truck-gifts-boxes-and-christmas-tree-behind.jpeg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content a {
+            text-decoration: none;
+            padding: 10px 25px;
+            background: #FFD700;
+            color: #333;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .hero-content a:hover {
+            background: #FFA500;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section {
+            padding: 30px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 10px;
+        }
+
+        .products {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 260px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            color: #8B0000;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #FFA500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Christmas Gadgets</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Festive Gadgets for a Merry Christmas</h1>
+            <p>Discover the perfect gifts and gadgets to light up your holidays!</p>
+            <a href="#products">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="section" id="products">
+        <h2>Featured Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/free-photo-of-toy-truck-gifts-boxes-and-christmas-tree-behind.jpeg" alt="Toy Truck with Christmas Gifts">
+                <h3>Toy Truck with Christmas Gifts</h3>
+                <p>A fun and festive gift for kids and adults alike.</p>
+                <p><strong>$29.99</strong></p>
+            </div>
+            <div class="product-card">
+                <img src="images/free-photo-of-festive-birdhouse-ornaments-with-red-ribbons.jpeg" alt="Festive Birdhouse Ornament">
+                <h3>Festive Birdhouse Ornament</h3>
+                <p>A delightful ornament to bring charm to your Christmas tree.</p>
+                <p><strong>$14.99</strong></p>
+            </div>
+            <div class="product-card">
+                <img src="images/free-photo-of-festive-holiday-garland-with-red-bow-decoration.jpeg" alt="Festive Holiday Garland">
+                <h3>Festive Holiday Garland</h3>
+                <p>A beautiful garland to decorate your home this holiday season.</p>
+                <p><strong>$24.99</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact us: info@christmasgadgets.com</p>
+        <p>Follow us: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+        <p>&copy; 2024 Christmas Gadgets. All rights reserved.</p>
+    </footer>
+</body>
+</html>
